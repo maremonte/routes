@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to Routes",
+    "description": "Welcome to my new blog \"Routes\".",
+    "author": [
+      {
+        "name": "Mar",
+        "url": "https://example.com/mar"
+      }
+    ],
+    "date": "2022-04-09",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-04-09T21:15:39+02:00",
+    "input_file": {}
+  }
+]
