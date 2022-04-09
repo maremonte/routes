@@ -1,7 +1,7 @@
 ---
 title: "Welcome to Routes"
 description: |
-  Welcome to my new blog "Routes". 
+  Welcome to my new blog "Routes" 
 author:
   - name: Mar 
     url: https://example.com/mar
