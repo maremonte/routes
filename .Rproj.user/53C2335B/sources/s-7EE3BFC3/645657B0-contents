@@ -1,0 +1,88 @@
+---
+title: ""
+output: html_document
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results = 'hide'}
+library(XML)
+library(leaflet)
+library(rgdal)
+library(DT)
+library(htmlwidgets)
+library(webshot)
+library(sp) 
+library(plyr)
+
+myfile <- "../../../data/2021/20210828_Sluder.gpx"
+
+pfile <- htmlTreeParse(file = myfile, 
+                       error = function(...) {}, useInternalNodes = T)
+coords <- xpathSApply(pfile, path = "//trkpt", xmlAttrs)
+gps <- data.frame(t(coords))
+gps$lat <- as.numeric(gps$lat)
+gps$lon <- as.numeric(gps$lon)
+
+wp <- readOGR(myfile, layer = "track_points")
+hike.dists <- spDists(wp, segments=TRUE)
+ele.dists <- diff(wp$ele, lag=1)
+ele.dists <- ele.dists[ele.dists > 0]
+```
+
+
+**Detalls:**
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+dt <- data.frame(rbind(
+  "1500 m", #paste(round(sum(ele.dists)), "m"), 
+  paste(round(sum(hike.dists), 2), "km"),
+  "3230 m", #paste(round(max(wp$ele)), "m"),
+  "6-7h",
+  "Lineal",
+  "Val Martello, Alto Adige, Itàlia"
+))
+rownames(dt) <- c("Desnivell", "Distància", "Cota màxima", "Temps", 
+                  "Tipus", "Sortida")
+colnames(dt) <- c("")
+datatable(dt, options = list(dom = 't', ordering=F), 
+          colnames = rep("", ncol(dt))) %>% 
+  formatStyle(columns =0, fontWeight = "bold")
+```
+  
+**Mapa:**
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+leaflet(gps) %>% 
+  addTiles() %>% 
+  addPolylines(data = gps, 
+               lng = ~lon, 
+               lat = ~lat,
+               color = "#DF536B", opacity = 0.7) %>%
+  
+  # Add tiles
+  addProviderTiles("OpenStreetMap.Mapnik", group = "OpenStreetMap") %>%
+  addProviderTiles("OpenTopoMap", group = "OpenTopoMap") %>%
+  addProviderTiles("Esri.WorldImagery", group = "Satellite") %>%
+  
+  # Layers control
+  addLayersControl(position = 'bottomright',
+                   baseGroups = c("OpenStreetMap", "OpenTopoMap", "Satellite"),
+                   options = layersControlOptions(collapsed = FALSE))
+```
+
+
+**Perfil d'elevació:**
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+par(mar = c(5, 4, 2, 2))
+plot(cumsum(hike.dists), wp$ele[-1], type = "l", col = "#DF536B", 
+     xlab = "Distància (km)", ylab = "Cota (m)", axes = F, 
+     ylim = c(min(wp$ele), max(wp$ele) + 10))
+abline(v = seq(ceiling(sum(hike.dists))), 
+       h = seq(round_any(min(wp$ele), 100), 
+               round_any(max(wp$ele), 100, f= ceiling), 50),
+       lty = 3, col = "grey")
+polygon(c(cumsum(hike.dists), max(cumsum(hike.dists)), 0), 
+        c( wp$ele[-1], 0, 0), col = "#DF536B60", border = "darkred")
+axis(1, seq(0, ceiling(sum(hike.dists))))
+axis(2, pos=0, seq(round_any(min(wp$ele), 100),round_any(max(wp$ele), 100, f= ceiling), 100))
+```
