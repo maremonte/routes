@@ -31,7 +31,6 @@ leaflet(gps1, width = "100%") %>%
                lng = ~lon, 
                lat = ~lat,
                color = "#DF536B", opacity = 0.7) %>%
-  addCircleMarkers(lat = 46.63942, lng = 11.78158) %>%
   addMarkers(lat = 46.63942, lng = 11.78158, 
              popup='<a href="https://maremonte.github.io/routes/posts/2022-04-10-kaserillalm/">Kaserill Alm</a>',
     options = popupOptions(closeButton = FALSE)) %>%
