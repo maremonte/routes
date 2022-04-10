@@ -3,6 +3,7 @@ title: "Kaserill Alm"
 categories:
   - alto adige
   - val di funes
+  - walk
 description: |
   Ruta circular fins a la "Kaserill Alm" (panoràmica del 'Gruppo delle Odle')
 author:
@@ -22,6 +23,13 @@ Malga Zannes (1680 m): sentiero nº6 (1h) &rightarrow; sentiero nº35 &rightarro
 
 
 ```{r}
+library(knitr)
+kable(data.frame(
+  distància = "7.62 km",
+  desnivell = "400 m",
+  temps = "3-4h"
+))
+
 library(XML)
 library(leaflet)
 myfunction <- function(myfile){
@@ -73,3 +81,5 @@ De la `Malga Zannes` (1680m) s'agafa el camí nº6 direcció XX. Després d'1h s
 
 - https://maremonte.github.io/planning/posts/2022-04-09-val-di-funes/  
 - https://destinazionedolomiti.com/2021/05/14/val-di-funes-il-regno-della-pace-da-malga-zannes-verso-gampenalm-e-kaserill-alm/  
+
+**Last update:** `r format(as.Date(file.info(list.files()[grep("Rmd", list.files())])$mtime), "%d %b %Y")`<br />
