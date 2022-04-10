@@ -82,4 +82,6 @@ De la `Malga Zannes` (1680m) s'agafa el camí nº6 direcció XX. Després d'1h s
 - https://maremonte.github.io/planning/posts/2022-04-09-val-di-funes/  
 - https://destinazionedolomiti.com/2021/05/14/val-di-funes-il-regno-della-pace-da-malga-zannes-verso-gampenalm-e-kaserill-alm/  
 
+---
+
 **Last update:** `r format(as.Date(file.info(list.files()[grep("Rmd", list.files())])$mtime), "%d %b %Y")`<br />
