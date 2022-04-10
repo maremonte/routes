@@ -1,2 +1,6 @@
 *.gpx
-_posts/*
+_posts*
+*.c*
+*.n*
+*.R*
+*.y*
