@@ -25,7 +25,7 @@ Malga Zannes (1680 m): sentiero nº6 (1h) &rightarrow; sentiero nº35 &rightarro
 ```{r}
 library(knitr)
 kable(data.frame(
-  distància = "7.62 km",
+  distància = "7.6 km",
   desnivell = "400 m",
   temps = "3-4h"
 ))
