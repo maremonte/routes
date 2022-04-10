@@ -1,26 +1,27 @@
 {
-    "id": "8978BDFA",
-    "path": "~/GitHub/planning/_posts/2022-04-09-val-di-funes/val-di-funes.Rmd",
-    "project_path": null,
+    "id": "DCA5B66B",
+    "path": "~/GitHub/routes/index.Rmd",
+    "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "303025512",
     "contents": "",
     "dirty": false,
-    "created": 1649608448583.0,
+    "created": 1649610817288.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "65,229",
-        "scrollLine": "55"
+        "cursorPosition": "34,43",
+        "scrollLine": "12",
+        "last_setup_crc32": "7EE3BFC3c4e2d899"
     },
     "folds": "",
-    "lastKnownWriteTime": 1649528578,
+    "lastKnownWriteTime": 1649611514,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1649528578,
+    "last_content_update": 1649611514618,
     "read_only": false,
     "read_only_alternatives": []
 }
