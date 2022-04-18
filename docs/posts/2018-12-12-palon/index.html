@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+<title>Routes: Palon</title>
+
+
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2018-12-12"/>
+<meta property="article:created" itemprop="dateCreated" content="2018-12-12"/>
+<meta name="article:author" content="Mar"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Routes: Palon"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Routes"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Routes: Palon"/>
+
+<!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Palon"]},{"type":"character","attributes":{},"value":["Trentino","skipista","2000m"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Mar"]}]}]},{"type":"character","attributes":{},"value":["2018-12-12"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["palon_files/anchor-4.2.2/anchor.min.js","palon_files/bowser-1.9.3/bowser.min.js","palon_files/distill-2.2.21/template.v2.js","palon_files/header-attrs-2.11/header-attrs.js","palon_files/htmlwidgets-1.5.4/htmlwidgets.js","palon_files/jquery-3.6.0/jquery-3.6.0.js","palon_files/jquery-3.6.0/jquery-3.6.0.min.js","palon_files/jquery-3.6.0/jquery-3.6.0.min.map","palon_files/leaflet-1.3.1/images/layers-2x.png","palon_files/leaflet-1.3.1/images/layers.png","palon_files/leaflet-1.3.1/images/marker-icon-2x.png","palon_files/leaflet-1.3.1/images/marker-icon.png","palon_files/leaflet-1.3.1/images/marker-shadow.png","palon_files/leaflet-1.3.1/leaflet.css","palon_files/leaflet-1.3.1/leaflet.js","palon_files/leaflet-binding-2.1.0/leaflet.js","palon_files/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js","palon_files/leaflet-providers-plugin-2.1.0/leaflet-providers-plugin.js","palon_files/leafletfix-1.0.0/leafletfix.css","palon_files/popper-2.6.0/popper.min.js","palon_files/proj4-2.6.2/proj4.min.js","palon_files/Proj4Leaflet-1.0.1/proj4leaflet.js","palon_files/rstudio_leaflet-1.3.1/images/1px.png","palon_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css","palon_files/tippy-6.2.7/tippy-bundle.umd.min.js","palon_files/tippy-6.2.7/tippy-light-border.css","palon_files/tippy-6.2.7/tippy.css","palon_files/tippy-6.2.7/tippy.umd.min.js","palon_files/webcomponents-2.0.0/webcomponents.js","route.gpx"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+<meta name="distill:offset" content="../.."/>
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      tolerance: 5,
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0F2E3D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+  min-width: 150px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative; min-height: 500px; }
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
+</style>
+
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+<script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+<script type="application/javascript">
+
+function getMeta(metaName) {
+  var metas = document.getElementsByTagName('meta');
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+  return '';
+}
+
+function offsetURL(url) {
+  var offset = getMeta('distill:offset');
+  return offset ? offset + '/' + url : url;
+}
+
+function createFuseIndex() {
+
+  // create fuse index
+  var options = {
+    keys: [
+      { name: 'title', weight: 20 },
+      { name: 'categories', weight: 15 },
+      { name: 'description', weight: 10 },
+      { name: 'contents', weight: 5 },
+    ],
+    ignoreLocation: true,
+    threshold: 0
+  };
+  var fuse = new window.Fuse([], options);
+
+  // fetch the main search.json
+  return fetch(offsetURL('search.json'))
+    .then(function(response) {
+      if (response.status == 200) {
+        return response.json().then(function(json) {
+          // index main articles
+          json.articles.forEach(function(article) {
+            fuse.add(article);
+          });
+          // download collections and index their articles
+          return Promise.all(json.collections.map(function(collection) {
+            return fetch(offsetURL(collection)).then(function(response) {
+              if (response.status === 200) {
+                return response.json().then(function(articles) {
+                  articles.forEach(function(article) {
+                    fuse.add(article);
+                  });
+                })
+              } else {
+                return Promise.reject(
+                  new Error('Unexpected status from search index request: ' +
+                            response.status)
+                );
+              }
+            });
+          })).then(function() {
+            return fuse;
+          });
+        });
+
+      } else {
+        return Promise.reject(
+          new Error('Unexpected status from search index request: ' +
+                      response.status)
+        );
+      }
+    });
+}
+
+window.document.addEventListener("DOMContentLoaded", function (event) {
+
+  // get search element (bail if we don't have one)
+  var searchEl = window.document.getElementById('distill-search');
+  if (!searchEl)
+    return;
+
+  createFuseIndex()
+    .then(function(fuse) {
+
+      // make search box visible
+      searchEl.classList.remove('hidden');
+
+      // initialize autocomplete
+      var options = {
+        autoselect: true,
+        hint: false,
+        minLength: 2,
+      };
+      window.autocomplete(searchEl, options, [{
+        source: function(query, callback) {
+          const searchOptions = {
+            isCaseSensitive: false,
+            shouldSort: true,
+            minMatchCharLength: 2,
+            limit: 10,
+          };
+          var results = fuse.search(query, searchOptions);
+          callback(results
+            .map(function(result) { return result.item; })
+          );
+        },
+        templates: {
+          suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
+            var html = `
+              <div class="search-item">
+                <h3>${suggestion.title}</h3>
+                <div class="search-item-description">
+                  ${suggestion.description || ''}
+                </div>
+                <div class="search-item-preview">
+                  ${img}
+                </div>
+              </div>
+            `;
+            return html;
+          }
+        }
+      }]).on('autocomplete:selected', function(event, suggestion) {
+        window.location.href = offsetURL(suggestion.path);
+      });
+      // remove inline display style on autocompleter (we want to
+      // manage responsive display via css)
+      $('.algolia-autocomplete').css("display", "");
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+});
+
+</script>
+
+<style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
+
+/* Algolioa Autocomplete */
+
+.algolia-autocomplete {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: sub;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  padding-top: 8px;
+  padding-bottom: 0;
+  border-radius: 6px;
+  border: 1px #0F2E3D solid;
+  width: 180px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-nav .algolia-autocomplete {
+    display: none;
+    visibility: hidden;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete {
+    display: inline-block;
+    visibility: visible;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+    margin-left: 0;
+    width: 400px;
+    max-height: 400px;
+  }
+}
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 550px;
+  max-height: 70vh;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 5px;
+  margin-top: 3px;
+  margin-left: -150px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  border-top: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+  overflow: hidden;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.8em;
+  width: 80%;
+  margin-right: 4%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+  display: inline-block;
+  width: 15%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+  height: 3em;
+  width: auto;
+  display: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+  display: initial;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #eee;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+</style>
+
+
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+d-byline .byline {
+  grid-template-columns: 2fr 2fr;
+}
+
+d-byline .byline h3 {
+  margin-block-start: 1.5em;
+}
+
+d-byline .byline .authors-affiliations h3 {
+  margin-block-start: 0.5em;
+}
+
+.authors-affiliations .orcid-id {
+  width: 16px;
+  height:16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+
+d-title .dt-tags {
+  margin-top: 1em;
+  grid-column: text;
+}
+
+.dt-tags .dt-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+d-article table.gt_table td,
+d-article table.gt_table th {
+  border-bottom: none;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+d-article h3 {
+  margin-top: 1.5rem;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+/* Tweak code blocks */
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: auto;
+}
+
+d-article div.sourceCode {
+  background-color: white;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+d-article pre {
+  font-size: 12px;
+  color: black;
+  background: none;
+  margin-top: 0;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+d-article pre a {
+  border-bottom: none;
+}
+
+d-article pre a:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
+@media(min-width: 768px) {
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: visible !important;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+d-article pre {
+  font-size: 14px;
+}
+
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for d-contents */
+
+.d-contents {
+  grid-column: text;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  justify-self: start;
+}
+
+@media(min-width: 1000px) {
+  .d-contents.d-contents-float {
+    height: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+}
+
+.d-contents nav h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.d-contents li {
+  list-style-type: none
+}
+
+.d-contents nav > ul {
+  padding-left: 0;
+}
+
+.d-contents ul {
+  padding-left: 1em
+}
+
+.d-contents nav ul li {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.d-contents nav a {
+  font-size: 13px;
+  border-bottom: none;
+  text-decoration: none
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6)
+}
+
+.d-contents nav > ul > li > a {
+  font-weight: 600;
+}
+
+.d-contents nav > ul > li > ul {
+  font-weight: inherit;
+}
+
+.d-contents nav > ul > li > ul > li {
+  margin-top: 0.2em;
+}
+
+
+.d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.d-article-with-toc h2:nth-child(2) {
+  margin-top: 0;
+}
+
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+/* Citations */
+
+d-article .citation {
+  color: inherit;
+  cursor: inherit;
+}
+
+div.hanging-indent{
+  margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Include appendix styles here so they can be overridden */
+
+d-appendix {
+  contain: layout style;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
+d-appendix h3 {
+  grid-column: page-start / text-start;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+d-appendix h3 + * {
+  margin-top: 1em;
+}
+
+d-appendix ol {
+  padding: 0 0 0 15px;
+}
+
+@media (min-width: 768px) {
+  d-appendix ol {
+    padding: 0 0 0 30px;
+    margin-left: -30px;
+  }
+}
+
+d-appendix li {
+  margin-bottom: 1em;
+}
+
+d-appendix a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-appendix > * {
+  grid-column: text;
+}
+
+d-appendix > d-footnote-list,
+d-appendix > d-citation-list,
+d-appendix > distill-appendix {
+  grid-column: screen;
+}
+
+/* Include footnote styles here so they can be overridden */
+
+d-footnote-list {
+  contain: layout style;
+}
+
+d-footnote-list > * {
+  grid-column: text;
+}
+
+d-footnote-list a.footnote-backlink {
+  color: rgba(0,0,0,0.3);
+  padding-left: 0.5em;
+}
+
+
+
+/* Anchor.js */
+
+.anchorjs-link {
+  /*transition: all .25s linear; */
+  text-decoration: none;
+  border-bottom: none;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
+}
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 2em;
+}
+
+.posts-list .metadata .dt-authors {
+  display: block;
+  margin-top: 0.3em;
+  margin-right: 2em;
+}
+
+.posts-list .dt-tags {
+  display: block;
+  line-height: 1em;
+}
+
+.posts-list .dt-tags .dt-tag {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0.3em 0.4em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 60%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 75%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // add anchors
+  if (window.anchors) {
+    window.anchors.options.placement = 'left';
+    window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+  }
+
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  // move refs into #references-listing
+  $('#references-listing').replaceWith($('#refs'));
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-contents a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // remove code block used to force  highlighting css
+  $('.distill-force-highlighting-css').parent().remove();
+
+  // remove empty line numbers inserted by pandoc when using a
+  // custom syntax highlighting theme
+  $('code.sourceCode a:empty').remove();
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // article with toc class
+    $('.d-contents').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // add orcid ids
+    $('.authors-affiliations').find('.author').each(function(i, el) {
+      var orcid_id = front_matter.authors[i].orcidID;
+      if (orcid_id) {
+        var a = $('<a></a>');
+        a.attr('href', 'https://orcid.org/' + orcid_id);
+        var img = $('<img></img>');
+        img.addClass('orcid-id');
+        img.attr('alt', 'ORCID ID');
+        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+        a.append(img);
+        $(this).append(a);
+      }
+    });
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // remove d-appendix and d-footnote-list local styles
+    $('d-appendix > style:first-child').remove();
+    $('d-footnote-list > style:first-child').remove();
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refs = $(this).attr('data-cites').split(" ");
+      var refHtml = refs.map(function(ref) {
+        return "<p>" + $('#ref-' + ref).html() + "</p>";
+      }).join("\n");
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-contents').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+  <script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
+  <link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+  <script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
+  <script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+  <script src="../../site_libs/leaflet-binding-2.1.0/leaflet.js"></script>
+  <script src="../../site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+  <script src="../../site_libs/leaflet-providers-plugin-2.1.0/leaflet-providers-plugin.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Palon","authors":[{"author":"Mar","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2018-12-12T00:00:00.000+01:00","citationText":"Mar, 2018"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">Routes</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="../../index.html">Home</a>
+<a href="../../about.html">About</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Palon</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:Trentino" class="dt-tag">Trentino</a>
+  <a href="../../index.html#category:skipista" class="dt-tag">skipista</a>
+  <a href="../../index.html#category:2000m" class="dt-tag">2000m</a>
+</div>
+<!--/radix_placeholder_categories-->
+
+</div>
+
+<div class="d-byline">
+  Mar  
+  
+<br/>2018-12-12
+</div>
+
+<div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">distància</th>
+<th style="text-align: left;">desnivell</th>
+<th style="text-align: left;">temps</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">8 km</td>
+<td style="text-align: left;">775 m</td>
+<td style="text-align: left;">2h</td>
+</tr>
+</tbody>
+</table>
+<div id="htmlwidget-4efdfbce1ba6033f6ed6" style="width:100%;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4efdfbce1ba6033f6ed6">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addPolylines","args":[[[[{"lng":[11.073408,11.073401,11.073342,11.073302,11.073287,11.073217,11.073184,11.073154,11.073142,11.073128,11.073098,11.073072,11.073058,11.073037,11.073024,11.073012,11.072975,11.072946,11.072933,11.072921,11.072899,11.072848,11.072821,11.072763,11.072733,11.072708,11.072663,11.072649,11.072619,11.072606,11.072595,11.072559,11.072537,11.072526,11.072518,11.072486,11.07247,11.072456,11.072444,11.072434,11.072409,11.072387,11.07238,11.072372,11.072367,11.07236,11.072354,11.072346,11.072345,11.072342,11.072328,11.072319,11.072303,11.072285,11.072249,11.072245,11.072195,11.072187,11.072167,11.072159,11.072153,11.072134,11.07213,11.072132,11.072137,11.072093,11.072084,11.072034,11.072028,11.072001,11.071983,11.071976,11.071967,11.071961,11.071953,11.071949,11.071939,11.071938,11.071944,11.071945,11.071948,11.071947,11.071949,11.071948,11.071946,11.071945,11.071937,11.071931,11.071915,11.071885,11.071838,11.071812,11.071755,11.071685,11.071627,11.071615,11.07161,11.071605,11.071591,11.071568,11.071537,11.07149,11.071446,11.071445,11.071443,11.071439,11.071445,11.071447,11.071449,11.071453,11.071466,11.071464,11.071435,11.071422,11.071404,11.071379,11.071377,11.07135,11.071327,11.071304,11.071259,11.071249,11.071222,11.071211,11.071143,11.071136,11.071124,11.071127,11.071135,11.071139,11.071125,11.071101,11.071076,11.071018,11.07101,11.070917,11.070833,11.070804,11.070717,11.070675,11.070616,11.070528,11.070507,11.070454,11.07042,11.070408,11.070326,11.070304,11.070273,11.070229,11.070217,11.070212,11.07021,11.07021,11.070213,11.07022,11.070218,11.070224,11.070244,11.070247,11.070237,11.070223,11.070212,11.070186,11.07019,11.070191,11.070199,11.070197,11.070193,11.070211,11.07022,11.070219,11.070201,11.070186,11.070158,11.070125,11.070119,11.070097,11.070087,11.070081,11.070062,11.070051,11.070028,11.070017,11.070012,11.069982,11.069945,11.069892,11.069881,11.069876,11.069842,11.069805,11.069798,11.069781,11.069774,11.06975,11.069734,11.069689,11.069659,11.069647,11.069601,11.069593,11.069531,11.06951,11.069447,11.069415,11.069369,11.06936,11.069326,11.069299,11.069243,11.06924,11.069239,11.069225,11.06922,11.069216,11.069216,11.069226,11.069229,11.069238,11.069242,11.069245,11.069256,11.06926,11.069282,11.069286,11.069284,11.069283,11.069282,11.069279,11.069275,11.069271,11.069267,11.069261,11.069252,11.069249,11.069246,11.069243,11.069228,11.069168,11.06907,11.06905,11.069016,11.068983,11.068864,11.068802,11.068774,11.068742,11.068731,11.068712,11.068689,11.06868,11.068618,11.068606,11.068585,11.068565,11.06851,11.068502,11.06845,11.068427,11.068381,11.068359,11.068325,11.068285,11.068269,11.068262,11.068257,11.068225,11.068217,11.068202,11.06819,11.068169,11.068158,11.068109,11.068105,11.068083,11.068073,11.068065,11.068043,11.068009,11.067983,11.067944,11.067901,11.067884,11.067837,11.067789,11.067765,11.067753,11.067746,11.067654,11.067603,11.06756,11.067525,11.067468,11.067459,11.067395,11.067366,11.067328,11.067294,11.067287,11.067284,11.067279,11.067274,11.067262,11.067261,11.067255,11.067238,11.067236,11.067217,11.067205,11.067186,11.067156,11.067138,11.067128,11.067119,11.067115,11.067112,11.067108,11.067103,11.067093,11.067031,11.06684,11.066774,11.066606,11.066587,11.066561,11.066542,11.066541,11.066539,11.066528,11.066518,11.066509,11.066503,11.066483,11.066477,11.066466,11.066463,11.066445,11.066429,11.066423,11.066394,11.066381,11.066369,11.066359,11.066357,11.066351,11.066325,11.06631,11.066295,11.06628,11.06627,11.066238,11.066235,11.066212,11.066201,11.0662,11.066187,11.066171,11.066163,11.066141,11.066137,11.066134,11.066134,11.066127,11.066124,11.066123,11.066116,11.066099,11.066082,11.066075,11.066067,11.066061,11.066051,11.066027,11.06601,11.065988,11.065986,11.06596,11.065953,11.065928,11.065886,11.06581,11.065713,11.065673,11.065641,11.065557,11.065462,11.06538,11.065326,11.065293,11.065287,11.065277,11.065258,11.065249,11.065183,11.065113,11.065099,11.065056,11.065033,11.065024,11.064985,11.064957,11.064928,11.064907,11.064895,11.064854,11.064827,11.064818,11.064756,11.064744,11.064707,11.06467,11.064645,11.06462,11.064589,11.064547,11.064534,11.064493,11.064434,11.064414,11.064364,11.06436,11.064321,11.064313,11.064284,11.064236,11.064193,11.064155,11.064105,11.064078,11.064069,11.064005,11.063961,11.063929,11.063919,11.06388,11.063866,11.063807,11.063797,11.06374,11.063717,11.063704,11.063657,11.063635,11.063575,11.063548,11.063502,11.063431,11.06342,11.063367,11.063341,11.063335,11.063267,11.063247,11.063219,11.063172,11.063154,11.063108,11.063084,11.063046,11.063017,11.062972,11.062955,11.062935,11.062906,11.062883,11.062848,11.062815,11.06278,11.062774,11.062736,11.062726,11.062682,11.062653,11.062642,11.062609,11.062602,11.062562,11.062541,11.062529,11.062523,11.062476,11.062462,11.062445,11.062399,11.062384,11.062362,11.062348,11.062328,11.062309,11.062298,11.062278,11.062226,11.062199,11.062191,11.062176,11.062163,11.062157,11.062105,11.062093,11.06205,11.062038,11.062003,11.061922,11.061878,11.061854,11.061752,11.061734,11.061699,11.061636,11.061621,11.061594,11.061557,11.061494,11.061478,11.061449,11.061428,11.061406,11.061391,11.061367,11.061323,11.061318,11.061297,11.06126,11.06124,11.061219,11.061207,11.061177,11.061146,11.061134,11.061124,11.061104,11.061071,11.061044,11.061016,11.060995,11.060965,11.060948,11.060893,11.060833,11.06079,11.060782,11.060747,11.060731,11.060682,11.060677,11.060647,11.060619,11.060601,11.060565,11.060552,11.060516,11.060509,11.06048,11.060461,11.060411,11.060401,11.060308,11.060253,11.060224,11.060179,11.060159,11.060146,11.060101,11.060077,11.06007,11.060055,11.060017,11.059969,11.059915,11.059872,11.059847,11.059837,11.059811,11.059776,11.059759,11.059701,11.059672,11.059617,11.059588,11.059535,11.059494,11.059484,11.059398,11.05937,11.059346,11.059287,11.05926,11.059198,11.059173,11.059153,11.05913,11.059123,11.059105,11.059102,11.059092,11.059092,11.059095,11.059101,11.059101,11.059098,11.059105,11.059117,11.059149,11.059237,11.059305,11.059312,11.05932,11.059345,11.05935,11.059384,11.059376,11.059376,11.059374,11.059375,11.059383,11.059384,11.059383,11.059385,11.059383,11.059389,11.059389,11.059389,11.059389,11.059389,11.059389,11.059389,11.059389,11.059389,11.059389,11.059388,11.059387,11.059374,11.059371,11.059369,11.059369,11.05937,11.05937,11.05937,11.05937,11.059371,11.059371,11.059372,11.059372,11.059372,11.059372,11.059373,11.059373,11.059373,11.059374,11.059375,11.059378,11.059378,11.059372,11.059362,11.059343,11.059325,11.059316,11.059305,11.059301,11.059298,11.059297,11.059294,11.059294,11.059295,11.059297,11.059293,11.059283,11.059257,11.059252,11.059249,11.059244,11.059242,11.059227,11.059224,11.059218,11.059219,11.059214,11.059212,11.059214,11.059214,11.05921,11.059206,11.059187,11.059184,11.05919,11.05919,11.059186,11.059184,11.059184,11.059201,11.059201,11.059202,11.059198,11.059194,11.059195,11.05919,11.059186,11.05918,11.05918,11.059187,11.059185,11.059186,11.059192,11.059198,11.059198,11.059198,11.0592,11.059209,11.059205,11.059205,11.059205,11.059203,11.059202,11.059195,11.059199,11.0592,11.059203,11.059208,11.059205,11.059206,11.059203,11.0592,11.059183,11.05918,11.059166,11.059154,11.059153,11.059154,11.059157,11.059157,11.059158,11.059124,11.059116,11.059098,11.059071,11.059065,11.059068,11.059071,11.059074,11.059088,11.059094,11.059091,11.059085,11.059086,11.059094,11.05911,11.059158,11.059173,11.059185,11.059195,11.05922,11.059273,11.059297,11.05932,11.059358,11.059383,11.059403,11.059458,11.059525,11.059539,11.059545,11.059632,11.059645,11.059723,11.059743,11.059792,11.059799,11.059822,11.05988,11.059899,11.059899,11.059936,11.059956,11.060001,11.060028,11.060084,11.060136,11.06018,11.060201,11.060275,11.060286,11.060332,11.060402,11.060426,11.060456,11.060459,11.06046,11.060499,11.060527,11.060561,11.060574,11.060564,11.060559,11.060559,11.060556,11.060555,11.060555,11.060555,11.060558,11.060642,11.060716,11.060732,11.060738,11.060754,11.060744,11.060744,11.060746,11.060746,11.060735,11.060735,11.060728,11.060738,11.060743,11.060741,11.06074,11.060738,11.060729,11.06073,11.06073,11.060731,11.060749,11.060749,11.060752,11.060752,11.060752,11.060748,11.060739,11.06073,11.060728,11.060731,11.060735,11.060736,11.060773,11.060788,11.060799,11.060848,11.060869,11.060881,11.060946,11.060968,11.06098,11.060976,11.06094,11.060893,11.060873,11.060849,11.060797,11.060753,11.060738,11.060721,11.060704,11.060694,11.060676,11.060645,11.060638,11.060632,11.060596,11.060582,11.060519,11.06051,11.060465,11.060452,11.060414,11.060394,11.060389,11.060355,11.060344,11.060322,11.060298,11.060288,11.060261,11.060251,11.060143,11.060097,11.06008,11.060063,11.060051,11.060032,11.059995,11.05997,11.059896,11.059887,11.059874,11.059851,11.059815,11.059788,11.059746,11.059736,11.059706,11.059659,11.059643,11.059634,11.059618,11.05957,11.059539,11.059498,11.059487,11.059438,11.059419,11.059386,11.05937,11.059352,11.059343,11.059288,11.059248,11.05924,11.05921,11.059196,11.059147,11.059134,11.059109,11.059088,11.059054,11.059008,11.058998,11.058945,11.058896,11.058846,11.058832,11.058803,11.058807,11.058808,11.058828,11.058835,11.058861,11.058868,11.058901,11.058901,11.058896,11.058895,11.058913,11.058924,11.058939,11.058936,11.058938,11.058991,11.059004,11.059055,11.059069,11.059124,11.059177,11.059221,11.059244,11.059308,11.059356,11.059365,11.059398,11.059414,11.059387,11.059349,11.059241,11.059205,11.059172,11.05913,11.059107,11.059061,11.059045,11.05901,11.058983,11.058966,11.058875,11.058824,11.058799,11.058751,11.058735,11.058712,11.058686,11.058675,11.058668,11.058667,11.05866,11.058654,11.058643,11.058641,11.058645,11.05868,11.05868,11.058681,11.058681,11.058681,11.058683,11.058685,11.058685,11.058675,11.058733,11.058779,11.058841,11.058857,11.05894,11.058983,11.05902,11.059043,11.059052,11.059063,11.05908,11.059088,11.059064,11.059033,11.059009,11.059004,11.058989,11.058973,11.058935,11.058911,11.058897,11.05887,11.058839,11.058823,11.058789,11.058772,11.058726,11.058692,11.058668,11.05862,11.058603,11.058567,11.05856,11.058495,11.058488,11.058443,11.05843,11.058389,11.058368,11.058347,11.058319,11.058303,11.058282,11.05823,11.058219,11.058178,11.058169,11.058085,11.058075,11.058046,11.058001,11.057975,11.057955,11.057912,11.057893,11.057878,11.057842,11.057826,11.057828,11.057825,11.057825,11.057821,11.057822,11.057822,11.057822,11.057793,11.057748,11.057642,11.057636,11.057615,11.057606,11.057565,11.057559,11.057526,11.0575,11.057498,11.057517,11.057524,11.057546,11.057551,11.057533,11.057509,11.057504,11.057496,11.057496,11.057496,11.057505,11.057529,11.057569,11.057639,11.057647,11.057649,11.057653,11.057649,11.057642,11.057645,11.057645,11.057647,11.057655,11.057662,11.05767,11.057672,11.057679,11.05768,11.057642,11.057676,11.057701,11.057788,11.057807,11.057875,11.057904,11.057973,11.05798,11.058051,11.058105,11.058176,11.058198,11.058226,11.058227,11.058228,11.058219,11.058171,11.058164,11.058126,11.058124,11.058111,11.058066,11.058058,11.058028,11.057981,11.057974,11.057953,11.057904,11.057898,11.057813,11.057793,11.057768,11.057748,11.057745,11.057692,11.057685,11.057647,11.057642,11.057634,11.057595,11.057586,11.057556,11.057516,11.057507,11.057501,11.057495,11.057486,11.057486,11.057483,11.057477,11.05748,11.05748,11.057475,11.057473,11.057468,11.05748,11.057531,11.057535,11.057537,11.057538,11.057538,11.057537,11.057538,11.057537,11.057537,11.057537,11.057538,11.057538,11.057542,11.057557,11.057566,11.05758,11.057645,11.057676,11.057769,11.057828,11.057979,11.058092,11.058177,11.058187,11.058231,11.058255,11.058256,11.058212,11.058205,11.058154,11.058146,11.058084,11.058079,11.058039,11.058017,11.058002,11.057961,11.057911,11.057906,11.057867,11.057842,11.057832,11.057809,11.05779,11.057786,11.057784,11.057747,11.057696,11.057658,11.05765,11.057634,11.057602,11.057587,11.057563,11.057553,11.057557,11.057568,11.057592,11.057621,11.057639,11.057654,11.057682,11.057719,11.05772,11.057692,11.057687,11.057647,11.057641,11.057607,11.057604,11.057647,11.057656,11.057759,11.057785,11.057793,11.057883,11.057899,11.057994,11.058003,11.058038,11.058082,11.0581,11.058164,11.058227,11.058271,11.058291,11.058355,11.058363,11.058445,11.058447,11.058406,11.058382,11.058357,11.058343,11.058324,11.058298,11.058286,11.058265,11.058243,11.05824,11.058237,11.058218,11.058213,11.058209,11.058199,11.05819,11.058151,11.05814,11.058134,11.058098,11.058069,11.05804,11.058001,11.057995,11.057978,11.057974,11.057948,11.057943,11.057935,11.057894,11.057884,11.057872,11.05784,11.057829,11.057785,11.057779,11.057733,11.057729,11.057697,11.057686,11.057646,11.057628,11.057616,11.057617,11.057625,11.057641,11.057657,11.057719,11.057799,11.057821,11.057826,11.057853,11.057924,11.057933,11.057955,11.058001,11.058046,11.058067,11.058138,11.058155,11.058198,11.058243,11.058248,11.058328,11.058346,11.058406,11.058489,11.058509,11.058612,11.058642,11.058679,11.058686,11.058715,11.058722,11.058769,11.058776,11.058837,11.058853,11.058892,11.058948,11.058977,11.059026,11.059086,11.059109,11.059126,11.059158,11.059217,11.059294,11.059336,11.059359,11.059389,11.059443,11.059531,11.059555,11.059573,11.059599,11.059611,11.059596,11.05959,11.059537,11.059532,11.059516,11.059496,11.059495,11.059491,11.059465,11.059437,11.059435,11.059429,11.059413,11.059384,11.05934,11.059323,11.059318,11.059287,11.059285,11.059266,11.059245,11.059233,11.059218,11.059197,11.059187,11.059165,11.059142,11.0591,11.059089,11.059071,11.059064,11.059037,11.059025,11.058992,11.058977,11.058962,11.058948,11.058929,11.058914,11.058909,11.058871,11.058862,11.058825,11.058817,11.058809,11.058765,11.05873,11.058713,11.05871,11.05865,11.058651,11.058649,11.058645,11.05865,11.058684,11.058711,11.058717,11.058737,11.058752,11.058783,11.05881,11.058872,11.058879,11.058956,11.059003,11.059038,11.059068,11.059074,11.059116,11.05915,11.059171,11.059212,11.059234,11.059242,11.059288,11.059314,11.059339,11.059349,11.059404,11.059452,11.059456,11.059457,11.059447,11.059438,11.059433,11.059425,11.059424,11.059424,11.059425,11.059454,11.059454,11.059455,11.059455,11.059456,11.059437,11.059428,11.059401,11.059399,11.059394,11.059389,11.05937,11.059356,11.059333,11.059262,11.059262,11.059219,11.059188,11.059173,11.05916,11.059155,11.059153,11.059121,11.059115,11.059094,11.059083,11.059061,11.059016,11.059016,11.05902,11.059041,11.05906,11.059081,11.059092,11.059109,11.059109,11.05911,11.05911,11.059119,11.059119,11.059119,11.059118,11.059117,11.059117,11.059117,11.059116,11.059115,11.059115,11.05901,11.058962,11.058862,11.058819,11.058782,11.058668,11.058627,11.058581,11.05851,11.058483,11.058463,11.058482,11.058501,11.058555,11.058668,11.058756,11.058833,11.058875,11.058914,11.058995,11.059071,11.059084,11.059061,11.059029,11.058931,11.058874,11.058711,11.058627,11.058548,11.058487,11.058415,11.058357,11.058253,11.058154,11.057947,11.057837,11.057732,11.05762,11.05757,11.057477,11.05738,11.057345,11.057307,11.057293,11.057283,11.057254,11.057205,11.057166,11.057115,11.057067,11.057014,11.056946,11.056915,11.056898,11.056899,11.056897,11.056881,11.056868,11.056868,11.056868,11.056844,11.056824,11.056816,11.056798,11.05678,11.056768,11.056748,11.056735,11.056715,11.056697,11.056674,11.056657,11.056651,11.056637,11.056629,11.056626,11.056604,11.056571,11.056556,11.056556,11.056536,11.056511,11.056491,11.056467,11.056448,11.056454,11.056471,11.056511,11.056541,11.056575,11.056646,11.05675,11.056777,11.056798,11.056829,11.056854,11.056882,11.056916,11.056943,11.056964,11.056996,11.057029,11.057045,11.057059,11.057093,11.057136,11.057163,11.057178,11.057196,11.05721,11.057223,11.057244,11.057252,11.057257,11.057264,11.05726,11.057254,11.057262,11.057258,11.057249,11.057253,11.057269,11.057278,11.057265,11.057255,11.05725,11.057236,11.057227,11.057218,11.057192,11.057181,11.057185,11.057185,11.057185,11.057196,11.057208,11.057196,11.057178,11.057186,11.057214,11.057245,11.05726,11.057254,11.057259,11.057277,11.05728,11.057282,11.057296,11.057297,11.057314,11.057318,11.057323,11.057339,11.057355,11.05737,11.057397,11.057438,11.057468,11.05751,11.057554,11.057587,11.057619,11.057663,11.057716,11.057754,11.057806,11.057857,11.057903,11.057968,11.058026,11.058065,11.058103,11.058158,11.05821,11.058236,11.058249,11.058283,11.058332,11.05835,11.058353,11.058364,11.058385,11.058417,11.058435,11.058449,11.058406,11.058432,11.05842,11.058393,11.058394,11.058394,11.058392,11.058393,11.058395,11.058387,11.05839,11.058438,11.058472,11.058499,11.058521,11.058563,11.058579,11.058592,11.058623,11.058632,11.05862,11.058615,11.058625,11.058629,11.058606,11.058583,11.058592,11.058614,11.058617,11.058627,11.058656,11.058691,11.058694,11.058677,11.058682,11.058707,11.058731,11.05873,11.058723,11.05874,11.058769,11.058786,11.058765,11.058721,11.058693,11.058698,11.058703,11.058725,11.058749,11.058756,11.058752,11.058765,11.058798,11.058809,11.058799,11.058793,11.058822,11.058867,11.05888,11.058875,11.058859,11.058865,11.058887,11.058892,11.058879,11.05887,11.058887,11.058901,11.05889,11.058878,11.058888,11.058911,11.058915,11.0589,11.058894,11.058891,11.058896,11.058908,11.058916,11.058906,11.058875,11.058788,11.058768,11.05877,11.05877,11.058752,11.058731,11.058718,11.058712,11.058718,11.058714,11.058714,11.058743,11.058768,11.058776,11.058776,11.058779,11.058768,11.058742,11.058704,11.058696,11.058664,11.058622,11.058571,11.058545,11.058542,11.058621,11.058655,11.058688,11.058742,11.058862,11.058908,11.059039,11.059135,11.059205,11.059367,11.059453,11.059536,11.05962,11.059699,11.059789,11.059885,11.059967,11.060043,11.060116,11.060185,11.060249,11.060312,11.060373,11.060439,11.060516,11.060608,11.060686,11.060808,11.060865,11.060915,11.061015,11.061113,11.06116,11.061212,11.061274,11.061327,11.061382,11.061436,11.061478,11.061519,11.06156,11.061596,11.061642,11.061687,11.061739,11.061804,11.06187,11.061921,11.06197,11.062013,11.062118,11.062147,11.062202,11.062231,11.062246,11.062268,11.062298,11.062328,11.062368,11.062418,11.062464,11.062519,11.062581,11.062645,11.062715,11.062787,11.062848,11.062894,11.06294,11.062988,11.063039,11.063087,11.06313,11.063172,11.063244,11.063258,11.063266,11.063274,11.063282,11.06329,11.063298,11.06336,11.063403,11.063467,11.063525,11.063587,11.063652,11.06371,11.063764,11.063877,11.063934,11.063992,11.06404,11.064093,11.064149,11.064198,11.064251,11.064309,11.064366,11.06443,11.064495,11.064546,11.064602,11.064662,11.0647,11.064715,11.064726,11.06476,11.064809,11.064871,11.064958,11.065023,11.06511,11.065203,11.065311,11.065431,11.06555,11.065662,11.065767,11.065871,11.06596,11.066038,11.066152,11.066186,11.066222,11.066269,11.066287,11.06631,11.066347,11.066363,11.066364,11.066358,11.066358,11.066361,11.066377,11.066414,11.066452,11.066492,11.066537,11.06658,11.066614,11.066671,11.066698,11.066724,11.066764,11.066809,11.06684,11.066871,11.066904,11.066943,11.066974,11.067004,11.06703,11.067069,11.067122,11.067179,11.067284,11.067347,11.067451,11.067557,11.067603,11.067718,11.067874,11.067926,11.06796,11.068,11.068062,11.068087,11.068122,11.068122,11.068109,11.068109,11.068091,11.068091,11.068092,11.06813,11.068179,11.068277,11.068289,11.068338,11.068356,11.068348,11.068271,11.068228,11.068216,11.068239,11.068268,11.068291,11.0683,11.06824,11.068219,11.068235,11.068248,11.068256,11.068276,11.068311,11.068422,11.068468,11.068518,11.068655,11.068707,11.068766,11.068821,11.06895,11.068991,11.069046,11.069101,11.069152,11.069275,11.069317,11.069443,11.069539,11.069653,11.069701,11.06975,11.069798,11.06984,11.06989,11.069946,11.069979,11.07003,11.070059,11.070093,11.070143,11.070178,11.07021,11.070231,11.070251,11.070286,11.070325,11.070347,11.07038,11.070427,11.07048,11.070528,11.070567,11.070609,11.070618,11.070607,11.070602,11.07061,11.070676,11.070719,11.070805,11.070906,11.070984,11.071105,11.071172,11.071192,11.07122,11.071229,11.071238,11.071241,11.07122,11.071191,11.071283,11.071275,11.071219,11.071227,11.071238,11.071238,11.071149,11.071047,11.07103,11.070959,11.070944,11.070943,11.070989,11.071083,11.071113,11.071123,11.071144,11.071175,11.071207,11.071231,11.071251,11.071285,11.071318,11.07134,11.071363,11.071391,11.071416,11.071449,11.071488,11.071519,11.071539,11.071571,11.071606,11.071637,11.071665,11.071696,11.071726,11.071747,11.071774,11.071811,11.071842,11.071872,11.071907,11.071942,11.071961,11.072029,11.072057,11.072086,11.072127,11.072168,11.072192,11.072202,11.072231,11.072265,11.072297,11.072372,11.072413,11.072457,11.072508,11.072559,11.072691,11.072751,11.072798,11.072848,11.072929,11.073016,11.073062,11.073116,11.073225,11.073276,11.073323,11.073417,11.073474,11.073483,11.073487,11.073486,11.073483],"lat":[46.049575,46.049576,46.049578,46.049574,46.049571,46.049571,46.049563,46.04956,46.049559,46.049557,46.049557,46.049561,46.049564,46.049564,46.049563,46.049563,46.049554,46.049544,46.04954,46.049535,46.049526,46.049503,46.049495,46.04948,46.049478,46.049476,46.049474,46.049469,46.049469,46.049464,46.049461,46.049461,46.049459,46.04946,46.049462,46.049463,46.049461,46.049462,46.049461,46.049457,46.04945,46.04944,46.049431,46.049427,46.049419,46.049414,46.049408,46.049396,46.049388,46.049383,46.049361,46.04935,46.04934,46.049326,46.049291,46.049285,46.049275,46.049271,46.049254,46.049248,46.049244,46.049232,46.049227,46.049231,46.049237,46.04922,46.049219,46.049208,46.049204,46.049191,46.049187,46.049176,46.049151,46.049146,46.049121,46.049106,46.049092,46.049076,46.049047,46.049024,46.049001,46.048997,46.048967,46.048961,46.048934,46.048927,46.048903,46.048899,46.048887,46.048888,46.048886,46.048894,46.048897,46.048899,46.048891,46.048881,46.048875,46.04886,46.048835,46.048831,46.048818,46.048806,46.048773,46.048768,46.048743,46.048704,46.048687,46.048676,46.048655,46.048647,46.048605,46.048596,46.048575,46.048571,46.048556,46.048536,46.048527,46.048501,46.048499,46.048476,46.04844,46.04841,46.048416,46.048419,46.048423,46.048418,46.048404,46.048395,46.048358,46.048342,46.048309,46.048306,46.048309,46.048328,46.048331,46.048334,46.048324,46.048314,46.048299,46.048294,46.048282,46.04827,46.048267,46.048257,46.048241,46.048237,46.048207,46.048198,46.04818,46.048153,46.048137,46.048095,46.048046,46.048018,46.04799,46.047954,46.047947,46.047928,46.047891,46.047883,46.047856,46.04785,46.047849,46.047835,46.047831,46.047824,46.047778,46.047751,46.047738,46.047706,46.047687,46.047667,46.047649,46.047644,46.04763,46.047614,46.047609,46.04759,46.047585,46.047579,46.04757,46.047566,46.047558,46.047551,46.04755,46.047538,46.047517,46.0475,46.047494,46.047478,46.047455,46.047424,46.047411,46.047388,46.047382,46.047343,46.047341,46.047331,46.047316,46.047306,46.047276,46.047275,46.047259,46.047257,46.047242,46.047233,46.047224,46.04722,46.047202,46.047183,46.047157,46.047159,46.047161,46.047154,46.047155,46.047158,46.04716,46.04716,46.04716,46.047159,46.047166,46.047167,46.047171,46.047173,46.047178,46.04717,46.047165,46.047165,46.047164,46.047163,46.047162,46.047154,46.047154,46.047153,46.047154,46.047154,46.047156,46.047155,46.047156,46.047143,46.047111,46.047102,46.047099,46.047094,46.047063,46.04705,46.047038,46.047032,46.047031,46.047025,46.047022,46.04702,46.047006,46.047004,46.047001,46.046999,46.046984,46.046983,46.046968,46.046962,46.046944,46.046931,46.046898,46.046873,46.046859,46.046835,46.046821,46.046768,46.046754,46.04672,46.046703,46.046679,46.046662,46.046613,46.046605,46.046584,46.046577,46.04657,46.046546,46.04652,46.046504,46.046481,46.046451,46.046439,46.046414,46.046382,46.046362,46.046354,46.046348,46.046296,46.046271,46.046252,46.046232,46.046206,46.046202,46.046179,46.046168,46.046152,46.046132,46.046105,46.046097,46.046088,46.046079,46.046062,46.04605,46.046034,46.045997,46.045985,46.045936,46.045906,46.045869,46.045819,46.045761,46.045754,46.045747,46.045736,46.045715,46.045693,46.045682,46.045683,46.045682,46.045686,46.04569,46.045689,46.045675,46.045636,46.045597,46.045575,46.045564,46.045524,46.045504,46.045473,46.045456,46.045393,46.045371,46.045329,46.04532,46.045287,46.04526,46.045252,46.045202,46.045177,46.045151,46.045137,46.045129,46.045111,46.045061,46.045027,46.04501,46.044984,46.04496,46.044913,46.044905,46.044865,46.044829,46.04482,46.044783,46.044755,46.044743,46.044694,46.044687,46.044627,46.04462,46.04457,46.044544,46.044535,46.044499,46.044439,46.044406,46.044378,46.04436,46.044353,46.044338,46.044281,46.044256,46.044205,46.044195,46.044097,46.044086,46.04405,46.044,46.043851,46.043739,46.043696,46.043663,46.043595,46.043525,46.043463,46.043427,46.043377,46.04337,46.043358,46.043321,46.043305,46.043255,46.043205,46.043196,46.04316,46.043148,46.043137,46.043102,46.043082,46.043057,46.043038,46.043019,46.042993,46.042974,46.042971,46.04293,46.042919,46.042895,46.042868,46.042853,46.042832,46.04281,46.042784,46.042766,46.042731,46.042695,46.042676,46.04264,46.042634,46.042603,46.042598,46.04258,46.042554,46.042527,46.042496,46.042457,46.042432,46.042427,46.042382,46.042358,46.04234,46.042334,46.042318,46.04231,46.042281,46.042277,46.042244,46.042227,46.042216,46.042186,46.042173,46.042127,46.042114,46.042092,46.042057,46.042052,46.042027,46.042006,46.042004,46.041956,46.041943,46.041925,46.041888,46.041875,46.041848,46.041837,46.041811,46.041795,46.041757,46.041743,46.041734,46.041716,46.041695,46.041665,46.041638,46.04161,46.041606,46.041569,46.041559,46.041524,46.041493,46.041483,46.041458,46.041451,46.04142,46.041405,46.041391,46.041385,46.041351,46.041341,46.041325,46.041287,46.041278,46.041259,46.041241,46.041226,46.041211,46.041196,46.041168,46.041115,46.041088,46.041073,46.041054,46.041037,46.041032,46.040984,46.040971,46.040931,46.040913,46.040875,46.040796,46.040752,46.040739,46.040694,46.040668,46.040623,46.040549,46.040533,46.040498,46.040453,46.04038,46.040359,46.040327,46.040302,46.040276,46.040257,46.040223,46.040173,46.040164,46.040139,46.040102,46.040073,46.040048,46.040034,46.03998,46.039939,46.03991,46.039897,46.039862,46.039814,46.03978,46.039709,46.039671,46.039621,46.039603,46.039549,46.039503,46.039449,46.039438,46.039383,46.039363,46.039307,46.039298,46.039249,46.039211,46.039182,46.039136,46.039122,46.039075,46.039058,46.039031,46.039001,46.03894,46.038933,46.038854,46.038829,46.038806,46.038787,46.038777,46.03877,46.038746,46.038736,46.038732,46.038727,46.038712,46.038692,46.038664,46.03864,46.038622,46.038618,46.038609,46.038589,46.038581,46.038554,46.038542,46.038517,46.038503,46.038483,46.038457,46.038452,46.038414,46.038401,46.038384,46.038342,46.03832,46.038281,46.038254,46.038196,46.038145,46.038124,46.03806,46.038034,46.037966,46.037943,46.037921,46.037883,46.037809,46.037769,46.037734,46.037718,46.037692,46.037658,46.03762,46.03761,46.037603,46.03758,46.037578,46.037546,46.037548,46.037546,46.037554,46.037555,46.037547,46.037546,46.037549,46.037548,46.037548,46.037548,46.037548,46.037548,46.037548,46.037548,46.037548,46.037549,46.037549,46.03755,46.03755,46.037551,46.037552,46.037562,46.037557,46.037554,46.037554,46.037554,46.037553,46.037553,46.037553,46.037552,46.037552,46.037551,46.037551,46.037551,46.03755,46.03755,46.03755,46.03755,46.037548,46.037548,46.037546,46.037545,46.037522,46.037508,46.037466,46.037401,46.037378,46.037358,46.037352,46.037341,46.037338,46.037334,46.037329,46.037327,46.037315,46.03728,46.037261,46.037229,46.037213,46.037206,46.037182,46.037176,46.037153,46.037148,46.037133,46.037123,46.037106,46.037103,46.037067,46.037054,46.037048,46.037013,46.036976,46.036965,46.036926,46.036887,46.036835,46.036818,46.0368,46.036758,46.036748,46.036735,46.036687,46.036674,46.036627,46.036619,46.036612,46.036597,46.036571,46.036534,46.036529,46.036531,46.03653,46.036528,46.036528,46.036528,46.036528,46.036527,46.036514,46.036514,46.036516,46.036524,46.036525,46.036515,46.03646,46.03643,46.036403,46.036359,46.036339,46.036332,46.03632,46.036313,46.036272,46.036265,46.036243,46.03622,46.03621,46.0362,46.03617,46.036154,46.036123,46.036104,46.036096,46.03608,46.036062,46.036052,46.036023,46.035988,46.035983,46.035946,46.03592,46.035915,46.035883,46.035879,46.035855,46.035833,46.035797,46.035784,46.035782,46.035784,46.035788,46.035805,46.035815,46.035824,46.03584,46.03585,46.035853,46.035861,46.035879,46.035882,46.035886,46.035897,46.035902,46.035921,46.035921,46.035929,46.035934,46.035943,46.035954,46.035957,46.035955,46.03597,46.035979,46.036,46.036015,46.03604,46.036056,46.036065,46.036074,46.036095,46.036096,46.036101,46.036092,46.036096,46.036094,46.036094,46.036096,46.036094,46.036091,46.036089,46.036086,46.036095,46.036103,46.03611,46.036121,46.036124,46.036124,46.036124,46.036121,46.036083,46.036046,46.036045,46.036037,46.03602,46.03603,46.03603,46.036026,46.036026,46.036027,46.036028,46.036029,46.036029,46.036028,46.036029,46.036029,46.036024,46.036007,46.035993,46.035993,46.035993,46.035991,46.035992,46.035996,46.035998,46.036,46.036005,46.036008,46.036009,46.036009,46.035975,46.035941,46.035924,46.035857,46.03585,46.035848,46.035832,46.035821,46.035816,46.035769,46.035742,46.035707,46.035696,46.035676,46.035655,46.035654,46.035655,46.035652,46.03564,46.035627,46.03561,46.035581,46.035565,46.03554,46.035493,46.035483,46.035475,46.035412,46.035395,46.03535,46.035345,46.035329,46.035324,46.035301,46.035288,46.035282,46.035269,46.035265,46.035258,46.035252,46.035251,46.035246,46.035245,46.035214,46.035194,46.035182,46.035168,46.035162,46.035149,46.035126,46.035105,46.035068,46.035064,46.035061,46.035054,46.035048,46.035045,46.035034,46.035032,46.035026,46.034999,46.034987,46.034982,46.034976,46.034943,46.034916,46.034888,46.03488,46.034848,46.034827,46.034794,46.034783,46.034774,46.034769,46.034725,46.03469,46.034682,46.034663,46.034649,46.034603,46.034586,46.034557,46.034534,46.034502,46.03446,46.034451,46.034422,46.03438,46.034308,46.034291,46.034261,46.034254,46.03425,46.03425,46.034258,46.03428,46.03428,46.034271,46.034258,46.034218,46.034196,46.034177,46.034159,46.034139,46.034114,46.03411,46.034111,46.034113,46.034126,46.034128,46.034146,46.03416,46.034175,46.034185,46.034213,46.034242,46.034247,46.034252,46.034231,46.034201,46.034184,46.034079,46.034048,46.034021,46.033987,46.033968,46.033926,46.033913,46.033882,46.033849,46.033838,46.033774,46.033718,46.033701,46.033663,46.03364,46.033625,46.033585,46.033538,46.033529,46.033512,46.033493,46.033477,46.033455,46.033447,46.03344,46.033439,46.033428,46.033415,46.033415,46.033415,46.033415,46.033394,46.03337,46.03333,46.033307,46.033306,46.033315,46.033327,46.033375,46.0334,46.033424,46.033434,46.033435,46.033433,46.033429,46.033408,46.033383,46.033352,46.033316,46.033309,46.03327,46.033251,46.033202,46.033163,46.033135,46.033101,46.033051,46.033025,46.032976,46.032951,46.03292,46.032881,46.032864,46.032836,46.03282,46.032791,46.032784,46.032738,46.032735,46.032697,46.032685,46.032652,46.03263,46.032619,46.032599,46.032585,46.032574,46.032548,46.032546,46.03251,46.032504,46.032447,46.032438,46.03241,46.03238,46.032357,46.032335,46.032304,46.032293,46.032284,46.032263,46.032242,46.032237,46.032228,46.032228,46.032234,46.032236,46.032236,46.032236,46.032237,46.032228,46.032186,46.032182,46.032167,46.032148,46.03211,46.032106,46.032078,46.032058,46.032053,46.032036,46.032035,46.032015,46.031986,46.031963,46.03194,46.031929,46.031928,46.031928,46.031928,46.031924,46.031891,46.031869,46.031858,46.031848,46.031822,46.031778,46.031755,46.031698,46.031692,46.031693,46.031693,46.031692,46.031682,46.03166,46.031656,46.031621,46.031586,46.03154,46.031504,46.031505,46.031518,46.031519,46.031534,46.031547,46.031572,46.031578,46.03162,46.031637,46.031666,46.031668,46.031651,46.031644,46.03164,46.031625,46.031585,46.031581,46.031528,46.03151,46.031465,46.031404,46.031398,46.031377,46.031341,46.031337,46.031319,46.031277,46.031272,46.031239,46.031226,46.031176,46.03115,46.03114,46.031079,46.031071,46.031026,46.031019,46.031015,46.03099,46.030988,46.030977,46.030958,46.030948,46.030933,46.030923,46.030902,46.030892,46.030883,46.030874,46.030874,46.030874,46.030873,46.030857,46.030811,46.030805,46.030801,46.030786,46.030761,46.030718,46.030688,46.030663,46.030638,46.030626,46.030592,46.030562,46.030519,46.030483,46.03045,46.030425,46.030402,46.030374,46.030354,46.030353,46.030349,46.030347,46.030363,46.030384,46.030417,46.03042,46.030434,46.030423,46.030414,46.03037,46.030362,46.030299,46.030291,46.030231,46.030225,46.030171,46.03015,46.030134,46.030083,46.030045,46.030037,46.029982,46.029914,46.029884,46.029845,46.029823,46.029825,46.029821,46.029796,46.029772,46.029732,46.029726,46.029718,46.029682,46.029674,46.029649,46.029644,46.029644,46.029639,46.029639,46.029647,46.02965,46.029656,46.029665,46.029656,46.029652,46.029618,46.029613,46.029556,46.029553,46.029524,46.029523,46.02953,46.029532,46.029565,46.029573,46.029577,46.029605,46.02961,46.029623,46.029626,46.029638,46.029652,46.029657,46.029675,46.029685,46.029705,46.029711,46.02974,46.029743,46.029746,46.029739,46.029691,46.029668,46.029644,46.029624,46.029597,46.029565,46.029551,46.029506,46.029444,46.029438,46.029428,46.029394,46.029384,46.029373,46.029338,46.029326,46.029276,46.029242,46.029236,46.029205,46.029177,46.029154,46.029116,46.029108,46.029082,46.029074,46.029051,46.029044,46.029041,46.028999,46.028984,46.028969,46.028919,46.028907,46.028867,46.02886,46.028817,46.02881,46.028773,46.028759,46.028706,46.028672,46.028642,46.028618,46.028606,46.028589,46.028585,46.028596,46.028618,46.028629,46.028634,46.028643,46.02867,46.028673,46.028678,46.028704,46.028715,46.028719,46.028742,46.028745,46.028763,46.028772,46.028773,46.028783,46.028791,46.028808,46.02884,46.028849,46.028886,46.028894,46.02891,46.028914,46.028924,46.028927,46.028932,46.028933,46.028944,46.028955,46.028968,46.028979,46.028991,46.029014,46.029024,46.029031,46.029034,46.029048,46.029063,46.029087,46.029095,46.029106,46.029118,46.029132,46.029158,46.029162,46.029163,46.029167,46.02916,46.029137,46.02913,46.029085,46.029078,46.029058,46.029024,46.029017,46.029008,46.028981,46.028945,46.028936,46.02893,46.028914,46.028876,46.02883,46.028814,46.028809,46.028758,46.02875,46.028726,46.02869,46.028663,46.028639,46.028603,46.02859,46.028551,46.02853,46.028496,46.028483,46.028456,46.028443,46.028405,46.028388,46.028352,46.028333,46.028305,46.028277,46.02825,46.028227,46.028213,46.028144,46.028139,46.0281,46.028087,46.028074,46.028022,46.027989,46.027969,46.027961,46.027911,46.027899,46.027886,46.027878,46.027874,46.027891,46.027889,46.027891,46.0279,46.027903,46.027917,46.027935,46.027942,46.027946,46.027954,46.027961,46.027963,46.027963,46.027964,46.02797,46.027964,46.027961,46.027968,46.027975,46.027977,46.027984,46.027989,46.027987,46.02799,46.027994,46.027971,46.027963,46.027959,46.027934,46.027923,46.027912,46.02789,46.027889,46.027889,46.027888,46.02787,46.027869,46.027861,46.02786,46.02786,46.027816,46.027803,46.027717,46.02771,46.027703,46.027696,46.027683,46.027671,46.02764,46.027594,46.027594,46.027537,46.027491,46.027446,46.027428,46.027403,46.027392,46.027336,46.027329,46.027266,46.027248,46.027216,46.027126,46.027043,46.027009,46.026977,46.026963,46.026957,46.02695,46.026934,46.026938,46.026945,46.026945,46.026916,46.026916,46.026916,46.026916,46.026916,46.026917,46.026917,46.026918,46.026918,46.026918,46.026912,46.026901,46.026878,46.026861,46.026838,46.026772,46.026769,46.026777,46.026822,46.026857,46.026939,46.027017,46.027058,46.027144,46.02727,46.027358,46.027445,46.027483,46.027525,46.027608,46.027687,46.027757,46.027786,46.027808,46.027804,46.027782,46.02773,46.027698,46.027663,46.027632,46.027596,46.027556,46.027476,46.02739,46.02719,46.02709,46.026993,46.026879,46.026829,46.02674,46.026644,46.026613,46.026574,46.026531,46.026485,46.026456,46.026427,46.026407,46.026393,46.02639,46.026385,46.026413,46.026444,46.026475,46.026508,46.02659,46.026701,46.026825,46.026884,46.026939,46.026992,46.027042,46.027086,46.027129,46.027179,46.027233,46.027295,46.027355,46.027414,46.027473,46.027543,46.027602,46.027647,46.027711,46.027774,46.027833,46.027888,46.027947,46.028003,46.028055,46.028124,46.028179,46.028246,46.028311,46.028377,46.028442,46.028479,46.028584,46.028631,46.028671,46.028753,46.02888,46.028927,46.028977,46.029023,46.029072,46.02912,46.02916,46.029197,46.029239,46.029279,46.029311,46.029349,46.029395,46.029436,46.029471,46.029502,46.029541,46.029584,46.029628,46.029698,46.029757,46.029802,46.02987,46.029925,46.029967,46.030028,46.030088,46.030159,46.030224,46.030272,46.03032,46.030359,46.03041,46.030455,46.030491,46.030542,46.030601,46.030665,46.030744,46.030798,46.03086,46.030939,46.031011,46.031064,46.031124,46.031187,46.031252,46.031324,46.031354,46.031381,46.031412,46.031447,46.031482,46.031512,46.031526,46.031557,46.031628,46.03168,46.031744,46.031798,46.031858,46.031903,46.031974,46.032036,46.032077,46.03212,46.032165,46.032221,46.032262,46.032293,46.032338,46.032382,46.032421,46.032474,46.032518,46.03256,46.032608,46.032655,46.032695,46.032745,46.032786,46.032827,46.032863,46.032905,46.032953,46.032995,46.033033,46.033058,46.033095,46.033142,46.03318,46.033213,46.033226,46.033255,46.033314,46.033374,46.033445,46.033502,46.033521,46.033529,46.033533,46.033536,46.033538,46.033539,46.033541,46.033587,46.033622,46.033675,46.033715,46.033775,46.033818,46.03387,46.03393,46.033983,46.034039,46.034089,46.034144,46.034198,46.034247,46.034299,46.034347,46.0344,46.034447,46.034499,46.034534,46.034576,46.034625,46.034671,46.034719,46.034753,46.0348,46.034847,46.034914,46.034964,46.034994,46.035047,46.035079,46.03511,46.035152,46.035195,46.035247,46.03529,46.035334,46.035382,46.035425,46.035476,46.035533,46.03557,46.035616,46.035669,46.03571,46.035755,46.035789,46.035828,46.035867,46.035914,46.035956,46.035994,46.036041,46.036099,46.036145,46.036197,46.036239,46.036296,46.036352,46.036404,46.03646,46.036518,46.036578,46.03665,46.036709,46.036755,46.036805,46.036849,46.036887,46.036953,46.036991,46.037024,46.037055,46.037077,46.037086,46.037089,46.037087,46.03709,46.037139,46.037171,46.037249,46.037285,46.037323,46.037364,46.037405,46.03745,46.037474,46.037548,46.037586,46.037622,46.037649,46.037687,46.037733,46.03778,46.037842,46.037859,46.037876,46.037907,46.037957,46.037983,46.03804,46.038075,46.038096,46.03816,46.038189,46.038225,46.038262,46.038305,46.038344,46.038369,46.038399,46.038436,46.038466,46.038494,46.03853,46.038582,46.038643,46.038712,46.038785,46.038846,46.038903,46.039016,46.039065,46.039119,46.039236,46.039365,46.03943,46.039494,46.039549,46.039608,46.039662,46.039713,46.039768,46.039826,46.039887,46.039951,46.040011,46.040065,46.040125,46.040181,46.040233,46.040294,46.040349,46.040404,46.040517,46.040555,46.040648,46.040692,46.040739,46.040786,46.040821,46.040857,46.040897,46.040928,46.040958,46.040996,46.041029,46.041063,46.041103,46.04113,46.04114,46.041154,46.041179,46.041203,46.041214,46.041218,46.041218,46.041219,46.041214,46.041221,46.041232,46.041243,46.041255,46.041266,46.041278,46.04134,46.041396,46.041457,46.041517,46.041572,46.041614,46.041645,46.041681,46.041773,46.041824,46.041866,46.041906,46.041952,46.041991,46.042036,46.042084,46.042128,46.042181,46.042233,46.042282,46.042342,46.042403,46.042454,46.042504,46.042569,46.042614,46.042658,46.042702,46.04275,46.04282,46.042876,46.042956,46.043046,46.043143,46.043235,46.043326,46.043421,46.043515,46.043602,46.043683,46.04376,46.0439,46.043966,46.044026,46.04414,46.0442,46.044259,46.044377,46.044433,46.044485,46.044547,46.044587,46.044636,46.044685,46.044726,46.044771,46.044819,46.044856,46.044888,46.044939,46.045017,46.045062,46.045117,46.045169,46.045214,46.045261,46.045317,46.045374,46.045447,46.045496,46.045558,46.045615,46.045658,46.045681,46.045696,46.045733,46.045766,46.045813,46.045864,46.045891,46.045978,46.046097,46.046129,46.046146,46.046164,46.046186,46.046195,46.046208,46.046203,46.0462,46.0462,46.046203,46.046203,46.046208,46.046247,46.046276,46.046324,46.046349,46.046408,46.046434,46.046462,46.046517,46.046551,46.046593,46.046624,46.046636,46.046646,46.046658,46.04672,46.046767,46.046782,46.046802,46.04683,46.046857,46.046872,46.046913,46.046911,46.046904,46.046892,46.046902,46.046915,46.046933,46.046979,46.046991,46.047014,46.04703,46.047047,46.047087,46.0471,46.047142,46.047183,46.047224,46.047256,46.047281,46.0473,46.047328,46.047355,46.047388,46.047416,46.047447,46.047459,46.047474,46.047538,46.047561,46.047577,46.047603,46.047641,46.04767,46.047691,46.047722,46.047805,46.04783,46.047839,46.04784,46.047835,46.047826,46.047826,46.047828,46.047839,46.047856,46.047886,46.0479,46.047934,46.047949,46.047967,46.047987,46.048007,46.048012,46.048025,46.048034,46.048043,46.048044,46.048047,46.048048,46.048051,46.048046,46.048038,46.048038,46.048044,46.048042,46.048076,46.048132,46.048146,46.04822,46.048241,46.048271,46.048317,46.048386,46.048403,46.04843,46.048451,46.048461,46.048473,46.048494,46.048528,46.04855,46.048566,46.048589,46.048617,46.048644,46.048677,46.04871,46.048726,46.04875,46.048788,46.048823,46.048841,46.04886,46.048887,46.048912,46.04893,46.048955,46.04899,46.049013,46.049033,46.049063,46.049088,46.049108,46.049138,46.049189,46.049214,46.04925,46.049273,46.049285,46.049303,46.049336,46.049361,46.049374,46.049385,46.049401,46.049423,46.049437,46.049445,46.049459,46.049511,46.049515,46.04953,46.049547,46.049583,46.049614,46.049615,46.049613,46.049607,46.049611,46.049618,46.049633,46.049646,46.049647,46.049648,46.04965,46.049649]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#1F78B4","weight":5,"opacity":0.7,"fill":false,"fillColor":"#1F78B4","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,"OpenStreetMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenTopoMap",null,"OpenTopoMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Satellite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addLayersControl","args":[["OpenStreetMap","OpenTopoMap","Satellite"],[],{"collapsed":false,"autoZIndex":true,"position":"bottomright"}]}],"limits":{"lat":[46.026385,46.04965],"lng":[11.056448,11.073487]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<hr />
+<p><strong>Last update:</strong> 18 apr 2022<br /></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
